@@ -1,0 +1,12 @@
+[
+    {
+        "question": ["Question"],
+        "answers": [
+            "Answer a",
+            "Answer b",
+            "Answer c",
+            "Answer d"
+        ],
+        "solution": 0
+    }
+]

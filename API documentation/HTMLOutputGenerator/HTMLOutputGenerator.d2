@@ -1,0 +1,11 @@
+HTMLOutputGenerator {
+    shape: class
+
+    - HTMLBoilerPlateHeader: String
+    - HTMLBoilerPlateFooter: String
+
+    + write(questionList\: Question\[0\.\.\*\], outputFilePath\: String)
+    + checkQuestionList(questionList\: Question\[0\.\.\*\])
+    + checkPath(outputFilePath\: String)
+    + generate(questionList\: Question\[0\.\.\*\]): String
+}

@@ -1,0 +1,11 @@
+HTMLOutputGenerator: @HTMLOutputGenerator/HTMLOutputGenerator.HTMLOutputGenerator
+JSONQuestionExtractor: @JSONQuestionExtractor/JSONQuestionExtractor.JSONQuestionExtractor
+Question: @Question/Question.Question
+
+HTMLOutputGenerator -> Question: «use» {
+    style.stroke-dash: 3
+}
+
+JSONQuestionExtractor -> Question: «create» {
+    style.stroke-dash: 3
+}

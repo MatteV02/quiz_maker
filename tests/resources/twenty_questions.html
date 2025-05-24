@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<title>Quiz</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: #f9f9f9;
+    color: #222;
+    }
+    h1 {
+    color: #004080;
+    text-align: center;
+    margin-bottom: 30px;
+    }
+    .question {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .question p {
+    margin: 0 0 10px;
+    font-weight: bold;
+    }
+    input[type="radio"] {
+    margin-bottom: 8px;
+    }
+    button {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    }
+    button:hover {
+    background-color: #003060;
+    }
+    .feedback, .incorrect {
+    font-weight: bold;
+    display: none;
+    }
+    .feedback { color: green; }
+    .incorrect { color: red; }
+    #results {
+    background: #e8f0ff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    border: 1px solid #bcd;
+    }
+</style>
+</head>
+<body>
+<h1>Quiz</h1>
+<form id="quizForm">
+<div class="question" data-correct="a">
+<p>1. Question 1</p>
+<input type="radio" name="q1" value="a"> Answer 1<br/>
+<input type="radio" name="q1" value="b"> Answer 2<br/>
+<input type="radio" name="q1" value="c"> Answer 3<br/>
+<input type="radio" name="q1" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>2. Question 2</p>
+<input type="radio" name="q2" value="a"> Answer 1<br/>
+<input type="radio" name="q2" value="b"> Answer 2<br/>
+<input type="radio" name="q2" value="c"> Answer 3<br/>
+<input type="radio" name="q2" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>3. Question 3</p>
+<input type="radio" name="q3" value="a"> Answer 1<br/>
+<input type="radio" name="q3" value="b"> Answer 2<br/>
+<input type="radio" name="q3" value="c"> Answer 3<br/>
+<input type="radio" name="q3" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>4. Question 4</p>
+<input type="radio" name="q4" value="a"> Answer 1<br/>
+<input type="radio" name="q4" value="b"> Answer 2<br/>
+<input type="radio" name="q4" value="c"> Answer 3<br/>
+<input type="radio" name="q4" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>5. Question 5</p>
+<input type="radio" name="q5" value="a"> Answer 1<br/>
+<input type="radio" name="q5" value="b"> Answer 2<br/>
+<input type="radio" name="q5" value="c"> Answer 3<br/>
+<input type="radio" name="q5" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>6. Question 6</p>
+<input type="radio" name="q6" value="a"> Answer 1<br/>
+<input type="radio" name="q6" value="b"> Answer 2<br/>
+<input type="radio" name="q6" value="c"> Answer 3<br/>
+<input type="radio" name="q6" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>7. Question 7</p>
+<input type="radio" name="q7" value="a"> Answer 1<br/>
+<input type="radio" name="q7" value="b"> Answer 2<br/>
+<input type="radio" name="q7" value="c"> Answer 3<br/>
+<input type="radio" name="q7" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>8. Question 8</p>
+<input type="radio" name="q8" value="a"> Answer 1<br/>
+<input type="radio" name="q8" value="b"> Answer 2<br/>
+<input type="radio" name="q8" value="c"> Answer 3<br/>
+<input type="radio" name="q8" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>9. Question 9</p>
+<input type="radio" name="q9" value="a"> Answer 1<br/>
+<input type="radio" name="q9" value="b"> Answer 2<br/>
+<input type="radio" name="q9" value="c"> Answer 3<br/>
+<input type="radio" name="q9" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>10. Question 10</p>
+<input type="radio" name="q10" value="a"> Answer 1<br/>
+<input type="radio" name="q10" value="b"> Answer 2<br/>
+<input type="radio" name="q10" value="c"> Answer 3<br/>
+<input type="radio" name="q10" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>11. Question 11</p>
+<input type="radio" name="q11" value="a"> Answer 1<br/>
+<input type="radio" name="q11" value="b"> Answer 2<br/>
+<input type="radio" name="q11" value="c"> Answer 3<br/>
+<input type="radio" name="q11" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>12. Question 12</p>
+<input type="radio" name="q12" value="a"> Answer 1<br/>
+<input type="radio" name="q12" value="b"> Answer 2<br/>
+<input type="radio" name="q12" value="c"> Answer 3<br/>
+<input type="radio" name="q12" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>13. Question 13</p>
+<input type="radio" name="q13" value="a"> Answer 1<br/>
+<input type="radio" name="q13" value="b"> Answer 2<br/>
+<input type="radio" name="q13" value="c"> Answer 3<br/>
+<input type="radio" name="q13" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>14. Question 14</p>
+<input type="radio" name="q14" value="a"> Answer 1<br/>
+<input type="radio" name="q14" value="b"> Answer 2<br/>
+<input type="radio" name="q14" value="c"> Answer 3<br/>
+<input type="radio" name="q14" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>15. Question 15</p>
+<input type="radio" name="q15" value="a"> Answer 1<br/>
+<input type="radio" name="q15" value="b"> Answer 2<br/>
+<input type="radio" name="q15" value="c"> Answer 3<br/>
+<input type="radio" name="q15" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>16. Question 16</p>
+<input type="radio" name="q16" value="a"> Answer 1<br/>
+<input type="radio" name="q16" value="b"> Answer 2<br/>
+<input type="radio" name="q16" value="c"> Answer 3<br/>
+<input type="radio" name="q16" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>17. Question 17</p>
+<input type="radio" name="q17" value="a"> Answer 1<br/>
+<input type="radio" name="q17" value="b"> Answer 2<br/>
+<input type="radio" name="q17" value="c"> Answer 3<br/>
+<input type="radio" name="q17" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>18. Question 18</p>
+<input type="radio" name="q18" value="a"> Answer 1<br/>
+<input type="radio" name="q18" value="b"> Answer 2<br/>
+<input type="radio" name="q18" value="c"> Answer 3<br/>
+<input type="radio" name="q18" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>19. Question 19</p>
+<input type="radio" name="q19" value="a"> Answer 1<br/>
+<input type="radio" name="q19" value="b"> Answer 2<br/>
+<input type="radio" name="q19" value="c"> Answer 3<br/>
+<input type="radio" name="q19" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<div class="question" data-correct="a">
+<p>20. Question 20</p>
+<input type="radio" name="q20" value="a"> Answer 1<br/>
+<input type="radio" name="q20" value="b"> Answer 2<br/>
+<input type="radio" name="q20" value="c"> Answer 3<br/>
+<input type="radio" name="q20" value="d"> Answer 4<br/>
+<span class="feedback">✔️ Correct!</span>
+<span class="incorrect">❌ Wrong</span>
+</div>
+<button onclick="checkAnswers()" type="button">Check Answers</button>
+</form>
+<div class="results" id="results"></div>
+<script>
+    function checkAnswers() {
+    const questions = document.querySelectorAll('.question');
+    let score = 0;
+    let results = '';
+    questions.forEach((q, index) => {
+        const selected = q.querySelector('input:checked');
+        const correct = q.dataset.correct;
+        const feedback = q.querySelector('.feedback');
+        const incorrect = q.querySelector('.incorrect');
+        if (selected) {
+        if (selected.value === correct) {
+            feedback.style.display = 'inline';
+            incorrect.style.display = 'none';
+            score++;
+            results += `<p><strong>Question ${index + 1}:</strong> Correct</p>`;
+        } else {
+            feedback.style.display = 'none';
+            incorrect.style.display = 'inline';
+            results += `<p><strong>Question ${index + 1}:</strong> Wrong</p>`;
+        }
+        } else {
+        results += `<p><strong>Question ${index + 1}:</strong> Not answered</p>`;
+        }
+    });
+    results += `<p><strong>Score:</strong> ${score}/${questions.length}</p>`;
+    document.getElementById("results").innerHTML = results;
+    }
+</script>
+</body>
+</html>
