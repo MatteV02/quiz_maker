@@ -197,3 +197,7 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Remove tests_output_folder
+tests/resources/tests_output/*
+!tests/resources/tests_output/PLACE_TEST_OUTPUT_FILE_HERE
