@@ -50,7 +50,7 @@ class TestHTMLOutputGenerator(unittest.TestCase):
                 None
             ),
         ]
-        path = 'tests/resources/tests_ouptut/out_test_write.html'
+        path = 'tests/resources/tests_output/out_test_write.html'
 
         self.__HTMLOutputGenerator.write(questions, path)
 
