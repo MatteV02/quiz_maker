@@ -41,7 +41,7 @@ Example of JSON input file.
             "wrong answer 3"
         ]
     },
-    // More questions
+    "_comment": "More questions",
 ]
 ```
 
