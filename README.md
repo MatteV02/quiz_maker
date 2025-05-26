@@ -1,6 +1,6 @@
-# Quiz maker
+# Quiz Maker
 
-Quiz maker converts questions in human readable format in an interactive form.  
+Quiz Maker converts questions in human readable format to an interactive form.  
 
 > [!WARNING]  
 > Tested on Python 3.13  
