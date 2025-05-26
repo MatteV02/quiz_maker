@@ -10,4 +10,3 @@
         - *file not found error exception*: if the specified path string does not refer to any existing file
         - *value error exception*: if the file type is not supported by this application
         - *value error exception*: if the file contains unrecognized tokens or less than expected tokens
-- `JSONQuestionExtractor()`: empty constructor

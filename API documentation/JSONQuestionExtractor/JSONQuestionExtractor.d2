@@ -1,10 +1,6 @@
 JSONQuestionExtractor {
     shape: class
     + read(path\: String): "Question[0..*]"
-    - checkPath(path\: String)
-    - checkFormatting(file\: File)
-    - checkContent(properly_formatted_file\: File)
-    - parseQuestion(file\: File): "Question[0..1]"
 }
 
 Question : @../Question/Question.Question
