@@ -144,5 +144,5 @@ class HTMLOutputGenerator:
     def write(self, questions: list[Question], out_file_path_str: str):
         out_file_path = Path(out_file_path_str)
 
-        with out_file_path.open('w') as out_file:
+        with out_file_path.open('w', encoding="utf-8") as out_file:
             out_file.write(self.__generate(questions))
