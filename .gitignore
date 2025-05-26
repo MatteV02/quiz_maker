@@ -201,3 +201,4 @@ cython_debug/
 # Remove tests_output_folder
 tests/resources/tests_output/*
 !tests/resources/tests_output/PLACE_TEST_OUTPUT_FILE_HERE
+deploy.md
